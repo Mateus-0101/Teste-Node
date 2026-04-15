@@ -4,7 +4,7 @@ const mongoose = require('mongoose'); // Biblioteca para facilitar administraç�
 const rotasConteudo = require('./rotas/rotasConteudo');
 
 // Conectar para MongoDB
-const dbURI = 'mongodb+srv://teste:kZL5s07hXtZ8SpYs@cluster0.j3iiwvj.mongodb.net/conteudos?appName=Cluster0'
+const dbURI = ''                   // URL para conectar ao banco de dados escolhido
 mongoose.connect(dbURI)            // Método assíncrono -> then e catch
     .then(() => app.listen(3000))  // Servidor só recebe requerimentos se a conexão for bem suceida
     .catch((err) => console.log(err));
