@@ -41,11 +41,3 @@ app.get('/sobre', (req,res) => {
 app.get('/sobre-nos', (req,res) => {
     res.redirect('/sobre');
 });
-
-// Página 404
-// Chamado quando pedido não é respondido por nenhum acima
-// Sempre o ÚLTIMO
-/* app.use((req, res) => {
-    // Adicionando o código de erro
-    res.status(404).render('404', { titulo: 'Erro 404'});
-}); */
