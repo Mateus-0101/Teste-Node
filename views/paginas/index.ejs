@@ -1,0 +1,28 @@
+<html lang="pt">
+    <%- include('../parciais/head.ejs') %>
+    
+    <body>
+       
+        <%- include('../parciais/nav.ejs') %>
+
+        <div class="Conteúdo do Site">
+            <h2>Exemplares</h2>
+            <% if(conteudo.length > 0) { %>
+                <% conteudo.forEach(conteudo => { %>
+                    <article class="conteudo">
+                        <a class="conteudo" href="/conteudo/<%= conteudo._id %>">
+                            <h3 class="title"><%= conteudo.titulo%> </h3>
+                        </a>
+                        <p class="resumo"><%= conteudo.exemplo%> </p>
+                    </article>
+                    
+                <% }) %>
+            <% } else {%> 
+                <p>Não conteúdo disponível</p>    
+            <% } %>
+        </div>
+
+        <%- include('../parciais/footer.ejs') %>
+        
+    </body>
+</html>
